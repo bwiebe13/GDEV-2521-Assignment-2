@@ -6,7 +6,7 @@ public static class VectorMath3D
     public static Vector3 DirectionToTarget(Vector3 from, Vector3 to)
     {
         // TODO: Return vector pointing from 'from' to 'to'
-        Vector2 direction = to - from;
+        Vector3 direction = to - from;
         return direction;
     }
 
@@ -69,7 +69,7 @@ public static class VectorMath3D
     public static float Pythagorean(float a, float b)
     {
         // TODO: Return sqrt(a� + b�)
-        float c = Mathf.Sqrt(Mathf.Pow(a, 2) + Mathf.Pow(b, 2));
+        float c = Mathf.Sqrt(a * a) + (b * b);
         return c;
     }
 
