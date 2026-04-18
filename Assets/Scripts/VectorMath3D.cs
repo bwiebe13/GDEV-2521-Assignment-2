@@ -3,6 +3,9 @@ using UnityEngine;
 
 public static class VectorMath3D
 {
+    public static Vector3 Add(Vector3 a, Vector3 b)
+    { return a + b; }
+
     public static Vector3 DirectionToTarget(Vector3 from, Vector3 to)
     {
         // TODO: Return vector pointing from 'from' to 'to'
