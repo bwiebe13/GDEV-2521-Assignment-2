@@ -72,7 +72,7 @@ public static class VectorMath3D
     public static float Pythagorean(float a, float b)
     {
         // TODO: Return sqrt(a� + b�)
-        float c = Mathf.Sqrt(a * a) + (b * b);
+        float c = Mathf.Sqrt((a * a) + (b * b));
         return c;
     }
 

@@ -115,9 +115,9 @@ public class Matrix3x3
         float i = values[2][2];
         //adjugate matrix is the transpose of the cofactor matrix
         Matrix3x3 adjugate = new Matrix3x3(
-            ((e * i) - (f * h)), -((b * i) - (c * h)), ((b * f) - (c * e)),
-            -((d * i) - (f * g)), ((a * i) - (c * g)), -((a * f) - (c * d)),
-            ((d * h) - (e * g)), -((a * h) - (b * g)), ((a * e) - (b * d))
+            ((e * i) - (f * h)), -((b * i) - (c * h)), +((b * f) - (c * e)),
+            -((d * i) - (f * g)), +((a * i) - (c * g)), -((a * f) - (c * d)),
+            +((d * h) - (e * g)), -((a * h) - (b * g)), +((a * e) - (b * d))
         );
 
         Matrix3x3 inverse = new Matrix3x3(0, 0, 0, 0, 0, 0, 0, 0, 0);
