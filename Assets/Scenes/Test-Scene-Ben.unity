@@ -2843,7 +2843,7 @@ GameObject:
   - component: {fileID: 1718296590}
   m_Layer: 0
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3836,6 +3836,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7693515621201535432, guid: 21175d643314d7d47ba3b57eff3b5458, type: 3}
+      propertyPath: _jumpForce
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: -7693515621201535432, guid: 21175d643314d7d47ba3b57eff3b5458, type: 3}
+      propertyPath: _moveSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7693515621201535432, guid: 21175d643314d7d47ba3b57eff3b5458, type: 3}
+      propertyPath: _gravityMagnitude
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: -7000312940697551333, guid: 21175d643314d7d47ba3b57eff3b5458, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 689882290025261948, guid: 21175d643314d7d47ba3b57eff3b5458, type: 3}
       propertyPath: m_Mesh
       value: 
