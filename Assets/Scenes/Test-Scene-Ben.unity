@@ -457,7 +457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af2ca979ac5582f4685ba36bac9d76fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpringLuanchPad
-  springConstant: 50
+  springConstant: 25
   compression: 0.5
 --- !u!64 &167064954
 MeshCollider:
