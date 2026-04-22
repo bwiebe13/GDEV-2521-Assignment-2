@@ -63,7 +63,6 @@ public class PlayerController : MonoBehaviour
             _rb.AddForce(Vector3.up * _jumpForce, ForceMode.VelocityChange);
             _currentState = PlayerState.Jumping;
         }
-        Debug.Log("Current State: " + _currentState);
         switch (_currentState)
         {
             case PlayerState.Idle:
@@ -71,7 +70,7 @@ public class PlayerController : MonoBehaviour
                 _rb.linearVelocity = new Vector3(0, _rb.linearVelocity.y, 0);
                 break;
             case PlayerState.Moving:
-                _velocity = Physics3D.CalculateVelocity(new Vector3(moveInput.x * _moveSpeed, 0, moveInput.y * _moveSpeed), Mathf.Clamp(1 / Time.deltaTime, 0.01f, 1));
+                _velocity = Physics3D.CalculateVelocity(new Vector3(moveInput.x * _moveSpeed, 0, moveInput.y * _moveSpeed), Mathf.Clamp(1 / Time.deltaTime, 0.1f, 1));
                 _rb.AddForce(_velocity, ForceMode.VelocityChange);
                 _rb.linearVelocity = new Vector3(Mathf.Clamp(_rb.linearVelocity.x, -_moveSpeed, _moveSpeed), _rb.linearVelocity.y, Mathf.Clamp(_rb.linearVelocity.z, -_moveSpeed, _moveSpeed));
                 break;
