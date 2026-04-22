@@ -112,4 +112,13 @@ public static class Physics3D
         gravity.z = 0;
         return gravity; // TODO: Implement this
     }
+
+    //added function for springs.
+    public static Vector3 SpringForce(float springConstant, float displacement, Vector3 direction)
+    {
+        //F = -k*x
+        Vector3 springForce;
+        springForce = -springConstant * displacement * direction;
+        return springForce;
+    }
 }
