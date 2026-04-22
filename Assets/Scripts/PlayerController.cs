@@ -20,7 +20,6 @@ public class PlayerController : MonoBehaviour
         Idle,
         Moving,
         Jumping,
-        Launched
     }
     private PlayerState _currentState = PlayerState.Idle;
     void Awake()
@@ -40,10 +39,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    public void setLaunched()
-    {
-        _currentState = PlayerState.Launched;
-    } 
+
     // Update is called once per frame
     void Update()
     {
@@ -73,8 +69,6 @@ public class PlayerController : MonoBehaviour
                 _velocity = Physics3D.CalculateVelocity(new Vector3(moveInput.x * _moveSpeed, 0, moveInput.y * _moveSpeed), Mathf.Clamp(1 / Time.deltaTime, 0.1f, 1));
                 _rb.AddForce(_velocity, ForceMode.VelocityChange);
                 _rb.linearVelocity = new Vector3(Mathf.Clamp(_rb.linearVelocity.x, -_moveSpeed, _moveSpeed), _rb.linearVelocity.y, Mathf.Clamp(_rb.linearVelocity.z, -_moveSpeed, _moveSpeed));
-                break;
-            case PlayerState.Launched:
                 break;
         }
         _rb.AddForce(gravityForce, ForceMode.Acceleration);
