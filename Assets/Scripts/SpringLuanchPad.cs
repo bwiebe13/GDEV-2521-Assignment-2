@@ -1,5 +1,3 @@
-using Unity.VisualScripting;
-using UnityEditor.Callbacks;
 using UnityEngine;
 //test
 public class SpringLuanchPad : MonoBehaviour
